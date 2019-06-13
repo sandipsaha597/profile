@@ -1,0 +1,645 @@
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 7vw;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", arial, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+span {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 1vw;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.f-sb {
+  justify-content: space-between;
+}
+
+header {
+  background: url("https://cdn.pixabay.com/photo/2016/11/29/02/47/abandoned-1866922__340.jpg");
+  background-repeat: no-repeat;
+  background-position: center -40px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  text-transform: uppercase;
+}
+header nav {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+header nav.box {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6);
+}
+header nav .container {
+  align-items: baseline;
+  font-size: 0.8rem;
+}
+header nav .container ul li:not(:first-child) {
+  display: none;
+}
+header nav .container ul li:hover, header nav .container ul li.active {
+  background: #efefef;
+}
+header nav .container ul li a {
+  padding: 0.4em;
+}
+header nav .container ul.menu.active li:not(:first-child) {
+  display: block;
+}
+header nav .container ul.menu.active li a {
+  padding: 0.4em;
+  width: 100%;
+}
+header nav .container i.fas {
+  display: none;
+}
+header nav .container .side {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 10vw;
+  height: 10vw;
+}
+header nav .container .side:hover, header nav .container .side:focus, header nav .container .side.active {
+  background: #000;
+}
+header nav .container .side:hover i.fas, header nav .container .side:focus i.fas, header nav .container .side.active i.fas {
+  color: #fff;
+}
+header nav .container .side .fa-bars {
+  display: block !important;
+}
+header .text {
+  text-align: center;
+}
+header .text h1 {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  padding: 0.3em 0.7em;
+}
+
+section#one {
+  margin-top: 4em;
+}
+section#one .container {
+  color: #777;
+  text-align: center;
+}
+section#one .container p {
+  color: #4c4c4c;
+  max-width: 600px;
+  margin: 1em auto;
+}
+section#one .container .profile i,
+section#one .container .profile span {
+  margin: 2em 0.1em;
+}
+section#one .container .profile img {
+  max-width: 80%;
+}
+section#one .container .profile p {
+  display: none;
+}
+
+section#two .container h4:first-child {
+  text-align: center;
+}
+section#two .container h5:not(:first-child) {
+  font-weight: 400;
+  letter-spacing: 0.5em;
+}
+section#two .container .progress-bar {
+  background: #c2c3c4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 9vw;
+}
+section#two .container .progress-bar .progress1,
+section#two .container .progress-bar .progress2,
+section#two .container .progress-bar .progress3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2f2f30;
+  height: 100%;
+  width: 90%;
+}
+section#two .container .progress-bar .progress2 {
+  width: 85%;
+}
+section#two .container .progress-bar .progress3 {
+  width: 75%;
+}
+
+section#three {
+  background: #2f2f30;
+  color: #fff;
+  margin-top: 2em;
+  margin-bottom: 0;
+  padding: 1em;
+  text-align: center;
+}
+section#three .container .wrapper {
+  padding: 1em;
+}
+section#three .container .wrapper .text {
+  font-size: 0.7rem;
+  margin-top: 0.4em;
+}
+
+section#portfolio {
+  color: #777;
+  text-align: center;
+}
+section#portfolio h2 {
+  background-image: url("https://cdn.pixabay.com/photo/2016/10/28/07/04/evening-1777352__340.jpg");
+  background-position: 30% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  letter-spacing: 0.25em;
+  height: 50vh;
+  display: grid;
+  margin-top: 0;
+  place-items: center;
+}
+section#portfolio .container .my-work {
+  margin-top: 4em;
+}
+section#portfolio .container .my-work span {
+  display: block;
+  margin: auto;
+  max-width: 650px;
+}
+section#portfolio .container .my-work .gallery {
+  margin-top: 2em;
+}
+section#portfolio .container .my-work .gallery .modal-box {
+  cursor: pointer;
+  display: none;
+  height: 80vw;
+  margin: auto;
+  width: 90%;
+  transition: 0.2s;
+}
+section#portfolio .container .my-work .gallery .modal-box:hover {
+  -webkit-filter: opacity(75%);
+          filter: opacity(75%);
+}
+section#portfolio .container .my-work .gallery .modal-box.active {
+  background: #000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  z-index: 101;
+}
+section#portfolio .container .my-work .gallery .modal-box.active:hover {
+  -webkit-filter: opacity(100%);
+          filter: opacity(100%);
+}
+section#portfolio .container .my-work .gallery .modal-box.active::after {
+  color: white;
+  content: "\f00d";
+  display: block;
+  font-family: "fontawesome";
+  font-size: 2rem;
+  position: fixed;
+  top: 5vw;
+  right: 5vw;
+}
+section#portfolio .container .my-work .gallery .modal-box.active img {
+  height: auto;
+  transition: 0.4s;
+}
+section#portfolio .container .my-work .load-more {
+  background: #e0e0e0;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  margin: 2em;
+  padding: 0.7em 1em;
+}
+section#portfolio .container .my-work .load-more:hover {
+  background: #c1bfbf;
+}
+
+section#contact {
+  margin-bottom: 4em;
+  text-align: center;
+}
+section#contact h2 {
+  background-image: url("https://image.shutterstock.com/image-photo/handsome-young-photographer-on-color-260nw-596614256.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  letter-spacing: 0.25em;
+  height: 50vh;
+  display: grid;
+  place-items: center;
+}
+section#contact .container h3, section#contact .container span {
+  color: #777;
+}
+section#contact .container .wrapper40 {
+  margin: 1em 0;
+}
+section#contact .container .wrapper40 #map {
+  height: 60vw;
+  width: 100%;
+}
+section#contact .container .wrapper60 {
+  color: #4c4c4c;
+  text-align: left;
+}
+section#contact .container .wrapper60 .address ul li {
+  padding: 0.25em 0em;
+}
+section#contact .container .wrapper60 .address i.fas {
+  width: 1.7em;
+}
+section#contact .container .wrapper60 .address p {
+  font-size: 0.9rem;
+}
+section#contact .container .wrapper60 .address p i.fas {
+  padding: 0.15em;
+  width: auto;
+}
+section#contact .container .wrapper60 .contact-form {
+  align-content: flex-end;
+}
+section#contact .container .wrapper60 .contact-form > * {
+  padding: 0.7em;
+  margin: 0.3em 0;
+  resize: none;
+  width: 100%;
+}
+section#contact .container .wrapper60 .contact-form .submit {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+section#contact .container .wrapper60 .contact-form .submit button {
+  background: #000;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  padding: 0.8em 1.5em;
+  color: white;
+}
+section#contact .container .wrapper60 .contact-form .submit button:hover {
+  background: #45fc0c;
+  color: #000;
+}
+
+footer {
+  background: #605f5f;
+  color: white;
+}
+footer:hover {
+  background: #232323;
+}
+footer .container {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+footer .container > * {
+  margin: 0.7em 0;
+}
+footer .container .to-the-top {
+  background: #e0e0e0;
+}
+footer .container .to-the-top:hover {
+  background: #d8d6d6;
+}
+footer .container .to-the-top a {
+  padding: 0.5em 1em;
+}
+footer .container .to-the-top a::before {
+  content: "\f062";
+  font-family: "fontawesome";
+  padding-right: 0.4em;
+}
+footer .container .social-links a {
+  color: #fff;
+  padding: 0.4em;
+}
+footer .container .social-links a:hover {
+  color: #d6d4d4;
+}
+footer .container .copyright {
+  font-size: 0.6rem;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  :root {
+    font-size: 5vw;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  :root {
+    font-size: 25px;
+  }
+
+  header {
+    height: 60vh;
+  }
+  header nav .container ul.menu.active li:not(:first-child) {
+    display: block;
+  }
+  header nav .container .side {
+    width: 40px;
+    height: 40px;
+  }
+
+  section#one .container .profile i,
+  section#one .container .profile span {
+    margin: 2em 0.1em;
+  }
+
+  section#two .container .progress-bar {
+    height: 60px;
+  }
+
+  section#three .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  section#three .container .wrapper {
+    padding: .5em;
+  }
+
+  section#portfolio {
+    text-align: center;
+  }
+  section#portfolio .container .my-work .gallery {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  section#portfolio .container .my-work .gallery .modal-box {
+    height: 40vw;
+    padding: 0.3em;
+    margin: 0;
+    width: 50%;
+  }
+  section#portfolio .container .my-work .gallery .modal-box.active::after {
+    top: 30px;
+    right: 30px;
+  }
+
+  section#contact {
+    text-align: center;
+  }
+  section#contact h2 {
+    background-image: url("https://image.shutterstock.com/image-photo/handsome-young-photographer-on-color-260nw-596614256.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    letter-spacing: 0.25em;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+  }
+  section#contact .container .wrapper40 {
+    margin: 1em 0;
+  }
+  section#contact .container .wrapper40 #map {
+    height: 400px;
+  }
+  section#contact .container .wrapper60 {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  section#contact .container .wrapper60 .address ul li {
+    padding: 0.25em 0em;
+  }
+  section#contact .container .wrapper60 .address i.fas {
+    width: 1.7em;
+  }
+  section#contact .container .wrapper60 .address p {
+    font-size: 0.7rem;
+  }
+  section#contact .container .wrapper60 .address p i.fas {
+    padding: 0.15em;
+    width: auto;
+  }
+  section#contact .container .wrapper60 .contact-form {
+    align-content: flex-end;
+  }
+  section#contact .container .wrapper60 .contact-form > * {
+    padding: 0.7em;
+    margin: 0.3em 0;
+    resize: none;
+    width: 100%;
+  }
+  section#contact .container .wrapper60 .contact-form .submit {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  section#contact .container .wrapper60 .contact-form .submit button {
+    background: #000;
+    display: inline-block;
+    border: none;
+    padding: 0.8em 1.5em;
+    color: white;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  header {
+    height: 70vh;
+  }
+  header nav .container ul {
+    display: flex;
+  }
+  header nav .container ul li:not(:first-child) {
+    display: block;
+  }
+  header nav .container ul li a {
+    padding: 0.4em 1em;
+  }
+  header nav .container ul #search {
+    display: none;
+  }
+  header nav .container ul.menu.active li:not(:first-child) {
+    display: block;
+  }
+  header nav .container ul i.fas {
+    padding-right: 0.3em;
+  }
+  header nav .container i.fas {
+    display: inline-block;
+  }
+  header nav .container .side {
+    width: 60px;
+    height: 60px;
+  }
+  header nav .container .side .fa-bars {
+    display: none !important;
+  }
+
+  section#one .container .profile {
+    display: flex;
+    align-items: center;
+    margin: 5em 0;
+  }
+  section#one .container .profile .wrapper50 {
+    width: 50%;
+  }
+  section#one .container .profile i,
+  section#one .container .profile span {
+    margin: 0 0.1em 3em;
+  }
+  section#one .container .profile p {
+    display: block;
+    margin: 0;
+  }
+
+  section#portfolio .container .my-work .gallery .modal-box {
+    height: 200px;
+    width: 25%;
+  }
+
+  section#contact {
+    text-align: center;
+  }
+  section#contact h2 {
+    background-image: url("https://image.shutterstock.com/image-photo/handsome-young-photographer-on-color-260nw-596614256.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    letter-spacing: 0.25em;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+  }
+  section#contact .container .contact-info {
+    display: flex;
+  }
+  section#contact .container .wrapper40 {
+    margin: 1em 0;
+    width: 40%;
+  }
+  section#contact .container .wrapper40 #map {
+    height: 400px;
+  }
+  section#contact .container .wrapper60 {
+    font-size: 0.8rem;
+    padding: 1em;
+    width: 60%;
+    text-align: left;
+  }
+  section#contact .container .wrapper60 .address ul li {
+    padding: 0.25em 0em;
+  }
+  section#contact .container .wrapper60 .address i.fas {
+    width: 1.7em;
+  }
+  section#contact .container .wrapper60 .address p {
+    font-size: 0.7rem;
+  }
+  section#contact .container .wrapper60 .address p i.fas {
+    padding: 0.15em;
+    width: auto;
+  }
+  section#contact .container .wrapper60 .contact-form {
+    align-content: flex-end;
+  }
+  section#contact .container .wrapper60 .contact-form > * {
+    padding: 0.7em;
+    margin: 0.3em 0;
+    resize: none;
+    width: 100%;
+  }
+  section#contact .container .wrapper60 .contact-form .submit {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  section#contact .container .wrapper60 .contact-form .submit button {
+    background: #000;
+    display: inline-block;
+    border: none;
+    padding: 0.8em 1.5em;
+    color: white;
+  }
+}
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
